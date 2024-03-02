@@ -13,12 +13,10 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-
     private final OrderService orderService;
 
     public UserService(UserRepository userRepository, OrderService orderService) {
         this.userRepository = userRepository;
-
         this.orderService = orderService;
     }
 
