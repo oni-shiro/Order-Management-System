@@ -27,6 +27,6 @@ public class OrderUpdateLogService {
     }
 
     public List<OrderUpdateLog> getOrderUpdateLogListForOrder(String orderId){
-        return orderUpdateLogRepository.findByOrderIdOrderByCreatedAtDesc(orderId);
+        return orderUpdateLogRepository.findByOrderIdOrderByCurrentOrderStatus(orderId);
     }
 }

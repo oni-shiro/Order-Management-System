@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface OrderUpdateLogRepository extends JpaRepository<OrderUpdateLog,String>{
     List<OrderUpdateLog> findByUpdatedBy(String userId);
-    List<OrderUpdateLog> findByOrderIdOrderByCreatedAtDesc(String orderId);
+    List<OrderUpdateLog> findByOrderIdOrderByCurrentOrderStatus(String orderId);
+//    List<OrderUpdateLog> findByOrderIdOrderByCreatedAt(String orderId);
 
 }
