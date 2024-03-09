@@ -37,7 +37,7 @@ public class OrderService implements StringConstant {
     public Order createOrder(NewOrderRequestDto orderRequestDto) {
         Order newOrder = ObjectMapper.orderMapperFromNewOrderRequestDto(orderRequestDto);
         newOrder.setAssignedTo(DEFAULT_ASSIGNEE);
-        Customer customer = ObjectMapper.CustomerMapperFromNewOrderRequestDto(orderRequestDto);
+        Customer customer = ObjectMapper.customerMapperFromNewOrderRequestDto(orderRequestDto);
         //call for save customer
         Customer savedCustomer = customerService.createCustomer(customer);
         newOrder.setCreatedBy(savedCustomer.getUniqueUserId());

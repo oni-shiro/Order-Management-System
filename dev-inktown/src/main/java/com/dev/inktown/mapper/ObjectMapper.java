@@ -13,7 +13,7 @@ public class ObjectMapper {
 
     }
 
-    public static Customer CustomerMapperFromNewOrderRequestDto(NewOrderRequestDto requestDto) {
+    public static Customer customerMapperFromNewOrderRequestDto(NewOrderRequestDto requestDto) {
         Customer cust = new Customer();
         cust.setCustomerName(requestDto.getCustomerName());
         cust.setPhoneNo(requestDto.getCustomerPhoneNo());
